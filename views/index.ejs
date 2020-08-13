@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/form" method="POST">
+        <% if(emailError != ''){ %>
+            <%= emailError %> <br>
+        <% } %> 
+        <input type="text" name="email" id="email" value="<%= email %>" placeholder="E-mail"><br>
+        <% if(nomeError != ''){ %>
+            <%= nomeError %> <br>
+        <% } %>
+        <input type="text" name="nome" id="nome" value="<%= nome %>" placeholder="Nome"><br>
+        <% if(pontosError != ''){ %>
+            <%= pontosError %> <br>
+        <% } %>
+        <input type="number" name="pontos" id="pontos" value="<%= pontos %>" placeholder="Pontos"><br>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
